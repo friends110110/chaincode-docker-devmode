@@ -1,0 +1,10 @@
+friendsdeMacBook-Pro:chaincode-docker-devmode friends$ peer chaincode instantiate -o 127.0.0.1:7050 -C helloch  -n hello -v 1.0 -l java -c "{\"Args\":[\"init\",\"a\", \"100\", \"b\",\"100\"]}"
+2017-09-05 09:20:50.657 CST [msp] GetLocalMSP -> DEBU 001 Returning existing local MSP
+2017-09-05 09:20:50.657 CST [msp] GetDefaultSigningIdentity -> DEBU 002 Obtaining default signing identity
+2017-09-05 09:20:50.657 CST [chaincodeCmd] checkChaincodeCmdParams -> INFO 003 Using default escc
+2017-09-05 09:20:50.657 CST [chaincodeCmd] checkChaincodeCmdParams -> INFO 004 Using default vscc
+2017-09-05 09:20:50.658 CST [msp/identity] Sign -> DEBU 005 Sign: plaintext: 0AC4070A6508031A0C08F2F7B7CD0510...30300A000A04657363630A0476736363 
+2017-09-05 09:20:50.658 CST [msp/identity] Sign -> DEBU 006 Sign: digest: 8B8D5CBB635A70C1ED62B577136D57BFA8B10E322BA9C6730E0BB66E8F11BA4B 
+2017-09-05 09:20:50.692 CST [msp/identity] Sign -> DEBU 007 Sign: plaintext: 0AC4070A6508031A0C08F2F7B7CD0510...3F6971CC0E911310A88AE2A12B0EA697 
+2017-09-05 09:20:50.692 CST [msp/identity] Sign -> DEBU 008 Sign: digest: F301EA483517EF7E63769C824BFBA7AF532EF345CD5BA99E34FAE1A7A667454A 
+2017-09-05 09:20:50.695 CST [main] main -> INFO 009 Exiting.....
