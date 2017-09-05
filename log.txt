@@ -1,0 +1,220 @@
+orderer     | 2017-09-05 01:09:14.538 UTC [orderer/main] Broadcast -> DEBU 786 Starting new Broadcast handler
+orderer     | 2017-09-05 01:09:14.538 UTC [orderer/common/broadcast] Handle -> DEBU 787 Starting new broadcast loop
+peer        | 2017-09-05 01:09:14.539 UTC [endorser] ProcessProposal -> DEBU 643 Entry
+peer        | 2017-09-05 01:09:14.539 UTC [protoutils] ValidateProposalMessage -> DEBU 644 ValidateProposalMessage starts for signed proposal 0xc421056de0
+peer        | 2017-09-05 01:09:14.539 UTC [protoutils] validateChannelHeader -> DEBU 645 validateChannelHeader info: header type 3
+peer        | 2017-09-05 01:09:14.539 UTC [protoutils] checkSignatureFromCreator -> DEBU 646 checkSignatureFromCreator starts
+peer        | 2017-09-05 01:09:14.539 UTC [protoutils] checkSignatureFromCreator -> DEBU 647 checkSignatureFromCreator info: creator is &{DEFAULT 3c9877995946e57995756309f0450cd4d739e01b83cbee5d6dbbaa8070ab75eb}
+peer        | 2017-09-05 01:09:14.539 UTC [protoutils] checkSignatureFromCreator -> DEBU 648 checkSignatureFromCreator info: creator is valid
+peer        | 2017-09-05 01:09:14.540 UTC [protoutils] checkSignatureFromCreator -> DEBU 649 checkSignatureFromCreator exists successfully
+peer        | 2017-09-05 01:09:14.540 UTC [protoutils] validateChaincodeProposalMessage -> DEBU 64a validateChaincodeProposalMessage starts for proposal 0xc421043d60, header 0xc421056e10
+peer        | 2017-09-05 01:09:14.540 UTC [protoutils] validateChaincodeProposalMessage -> DEBU 64b validateChaincodeProposalMessage info: header extension references chaincode name:"lscc" 
+peer        | 2017-09-05 01:09:14.540 UTC [endorser] ProcessProposal -> DEBU 64c processing txid: 77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6
+peer        | 2017-09-05 01:09:14.540 UTC [fsblkstorage] retrieveTransactionByID -> DEBU 64d retrieveTransactionByID() - txId = [77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6]
+peer        | 2017-09-05 01:09:14.540 UTC [lockbasedtxmgr] NewTxSimulator -> DEBU 64e constructing new tx simulator
+peer        | 2017-09-05 01:09:14.540 UTC [lockbasedtxmgr] newLockBasedTxSimulator -> DEBU 64f constructing new tx simulator [6bb7d73d-03a3-4509-a49c-059c726add77]
+peer        | 2017-09-05 01:09:14.540 UTC [endorser] simulateProposal -> DEBU 650 Entry - txid: 77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6 channel id: helloch
+peer        | 2017-09-05 01:09:14.540 UTC [endorser] callChaincode -> DEBU 651 Entry - txid: 77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6 channel id: helloch version: 1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.540 UTC [ccprovider] NewCCContext -> DEBU 652 NewCCCC (chain=helloch,chaincode=lscc,version=1.0.0-rc1-snapshot-a709058,txid=77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6,syscc=true,proposal=0xc421043d60,canname=lscc:1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] Launch -> DEBU 653 chaincode is running(no need to launch) : lscc:1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] Execute -> DEBU 654 Entry
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] Execute -> DEBU 655 chaincode canonical name: lscc:1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] sendExecuteMessage -> DEBU 656 [77b127a6]Inside sendExecuteMessage. Message TRANSACTION
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] setChaincodeProposal -> DEBU 657 Setting chaincode proposal context...
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] setChaincodeProposal -> DEBU 658 Proposal different from nil. Creating chaincode proposal context...
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] sendExecuteMessage -> DEBU 659 [77b127a6]sendExecuteMsg trigger event TRANSACTION
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] processStream -> DEBU 65a [77b127a6]Move state message TRANSACTION
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] HandleMessage -> DEBU 65b [77b127a6]Fabric side Handling ChaincodeMessage of type: TRANSACTION in state ready
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] filterError -> DEBU 65c Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] processStream -> DEBU 65d [77b127a6]sending state message TRANSACTION
+peer        | 2017-09-05 01:09:14.540 UTC [shim] func1 -> DEBU 65e [77b127a6]Received message TRANSACTION from shim
+peer        | 2017-09-05 01:09:14.540 UTC [shim] handleMessage -> DEBU 65f [77b127a6]Handling ChaincodeMessage of type: TRANSACTION(state:ready)
+peer        | 2017-09-05 01:09:14.540 UTC [shim] beforeTransaction -> DEBU 660 [77b127a6]Received TRANSACTION, invoking transaction on chaincode(Src:ready, Dst:ready)
+peer        | 2017-09-05 01:09:14.540 UTC [shim] handleGetState -> DEBU 661 [77b127a6]Sending GET_STATE
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] processStream -> DEBU 662 [77b127a6]Received message GET_STATE from shim
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] HandleMessage -> DEBU 663 [77b127a6]Fabric side Handling ChaincodeMessage of type: GET_STATE in state ready
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] afterGetState -> DEBU 664 [77b127a6]Received GET_STATE, invoking get state from ledger
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] filterError -> DEBU 665 Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.540 UTC [chaincode] func1 -> DEBU 666 [77b127a6] getting state for chaincode lscc, key hello, channel helloch
+peer        | 2017-09-05 01:09:14.540 UTC [statecouchdb] GetState -> DEBU 667 GetState(). ns=lscc, key=hello
+peer        | 2017-09-05 01:09:14.540 UTC [couchdb] ReadDoc -> DEBU 668 Entering ReadDoc()  id=[lscchello]
+peer        | 2017-09-05 01:09:14.540 UTC [couchdb] handleRequest -> DEBU 669 Entering handleRequest()  method=GET  url=http://couchdb0:5984/helloch/lscc%00hello?attachments=true
+peer        | 2017-09-05 01:09:14.541 UTC [couchdb] handleRequest -> DEBU 66a HTTP Request: GET /helloch/lscc%00hello?attachments=true HTTP/1.1 | Host: couchdb0:5984 | User-Agent: Go-http-client/1.1 | Accept: multipart/related | Accept-Encoding: gzip |  | 
+peer        | 2017-09-05 01:09:14.542 UTC [couchdb] handleRequest -> DEBU 66b Couch DB Error:not_found,  Status Code:404,  Reason:missing
+peer        | 2017-09-05 01:09:14.542 UTC [couchdb] ReadDoc -> DEBU 66c Document not found (404), returning nil value instead of 404 error
+peer        | 2017-09-05 01:09:14.542 UTC [chaincode] func1 -> DEBU 66d [77b127a6]No state associated with key: hello. Sending RESPONSE with an empty payload
+peer        | 2017-09-05 01:09:14.542 UTC [chaincode] 1 -> DEBU 66e [77b127a6]handleGetState serial send RESPONSE
+peer        | 2017-09-05 01:09:14.542 UTC [shim] func1 -> DEBU 66f [77b127a6]Received message RESPONSE from shim
+peer        | 2017-09-05 01:09:14.542 UTC [shim] handleMessage -> DEBU 670 [77b127a6]Handling ChaincodeMessage of type: RESPONSE(state:ready)
+peer        | 2017-09-05 01:09:14.543 UTC [shim] sendChannel -> DEBU 671 [77b127a6]before send
+peer        | 2017-09-05 01:09:14.543 UTC [shim] sendChannel -> DEBU 672 [77b127a6]after send
+peer        | 2017-09-05 01:09:14.543 UTC [shim] afterResponse -> DEBU 673 [77b127a6]Received RESPONSE, communicated (state:ready)
+peer        | 2017-09-05 01:09:14.543 UTC [shim] handleGetState -> DEBU 674 [77b127a6]GetState received payload RESPONSE
+peer        | 2017-09-05 01:09:14.544 UTC [shim] handlePutState -> DEBU 675 [77b127a6]Inside putstate
+peer        | 2017-09-05 01:09:14.544 UTC [shim] handlePutState -> DEBU 676 [77b127a6]Sending PUT_STATE
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] processStream -> DEBU 677 [77b127a6]Received message PUT_STATE from shim
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] HandleMessage -> DEBU 678 [77b127a6]Fabric side Handling ChaincodeMessage of type: PUT_STATE in state ready
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] filterError -> DEBU 679 Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] func1 -> DEBU 67a [77b127a6]state is ready
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] func1 -> DEBU 67b [77b127a6]Completed PUT_STATE. Sending RESPONSE
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] 1 -> DEBU 67c [77b127a6]enterBusyState trigger event RESPONSE
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] processStream -> DEBU 67d [77b127a6]Move state message RESPONSE
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] HandleMessage -> DEBU 67e [77b127a6]Fabric side Handling ChaincodeMessage of type: RESPONSE in state ready
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] filterError -> DEBU 67f Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.544 UTC [chaincode] processStream -> DEBU 680 [77b127a6]sending state message RESPONSE
+peer        | 2017-09-05 01:09:14.544 UTC [shim] func1 -> DEBU 681 [77b127a6]Received message RESPONSE from shim
+peer        | 2017-09-05 01:09:14.544 UTC [shim] handleMessage -> DEBU 682 [77b127a6]Handling ChaincodeMessage of type: RESPONSE(state:ready)
+peer        | 2017-09-05 01:09:14.544 UTC [shim] sendChannel -> DEBU 683 [77b127a6]before send
+peer        | 2017-09-05 01:09:14.544 UTC [shim] sendChannel -> DEBU 684 [77b127a6]after send
+peer        | 2017-09-05 01:09:14.544 UTC [shim] afterResponse -> DEBU 685 [77b127a6]Received RESPONSE, communicated (state:ready)
+peer        | 2017-09-05 01:09:14.544 UTC [shim] handlePutState -> DEBU 686 [77b127a6]Received RESPONSE. Successfully updated state
+peer        | 2017-09-05 01:09:14.544 UTC [shim] func1 -> DEBU 687 [77b127a6]Transaction completed. Sending COMPLETED
+peer        | 2017-09-05 01:09:14.545 UTC [shim] func1 -> DEBU 688 [77b127a6]Move state message COMPLETED
+peer        | 2017-09-05 01:09:14.545 UTC [shim] handleMessage -> DEBU 689 [77b127a6]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+peer        | 2017-09-05 01:09:14.545 UTC [shim] func1 -> DEBU 68a [77b127a6]send state message COMPLETED
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] processStream -> DEBU 68b [77b127a6]Received message COMPLETED from shim
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] HandleMessage -> DEBU 68c [77b127a6]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] HandleMessage -> DEBU 68d [77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6]HandleMessage- COMPLETED. Notify
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] notify -> DEBU 68e notifying Txid:77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] Execute -> DEBU 68f Exit
+peer        | 2017-09-05 01:09:14.545 UTC [ccprovider] NewCCContext -> DEBU 690 NewCCCC (chain=helloch,chaincode=hello,version=1.0,txid=77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6,syscc=false,proposal=0xc421043d60,canname=hello:1.0
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] Launch -> DEBU 691 chaincode is running(no need to launch) : hello:1.0
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] Execute -> DEBU 692 Entry
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] Execute -> DEBU 693 chaincode canonical name: hello:1.0
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] sendExecuteMessage -> DEBU 694 [77b127a6]Inside sendExecuteMessage. Message INIT
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] setChaincodeProposal -> DEBU 695 Setting chaincode proposal context...
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] setChaincodeProposal -> DEBU 696 Proposal different from nil. Creating chaincode proposal context...
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] sendExecuteMessage -> DEBU 697 [77b127a6]sendExecuteMsg trigger event INIT
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] processStream -> DEBU 698 [77b127a6]Move state message INIT
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] HandleMessage -> DEBU 699 [77b127a6]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] filterError -> DEBU 69a Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.545 UTC [chaincode] processStream -> DEBU 69b [77b127a6]sending state message INIT
+peer        | 2017-09-05 01:09:14.556 UTC [chaincode] processStream -> DEBU 69c [77b127a6]Received message PUT_STATE from shim
+peer        | 2017-09-05 01:09:14.556 UTC [chaincode] HandleMessage -> DEBU 69d [77b127a6]Fabric side Handling ChaincodeMessage of type: PUT_STATE in state ready
+peer        | 2017-09-05 01:09:14.556 UTC [chaincode] filterError -> DEBU 69e Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.556 UTC [chaincode] func1 -> DEBU 69f [77b127a6]state is ready
+peer        | 2017-09-05 01:09:14.557 UTC [chaincode] func1 -> DEBU 6a0 [77b127a6]Completed PUT_STATE. Sending RESPONSE
+peer        | 2017-09-05 01:09:14.557 UTC [chaincode] 1 -> DEBU 6a1 [77b127a6]enterBusyState trigger event RESPONSE
+peer        | 2017-09-05 01:09:14.557 UTC [chaincode] processStream -> DEBU 6a2 [77b127a6]Move state message RESPONSE
+peer        | 2017-09-05 01:09:14.557 UTC [chaincode] HandleMessage -> DEBU 6a3 [77b127a6]Fabric side Handling ChaincodeMessage of type: RESPONSE in state ready
+peer        | 2017-09-05 01:09:14.557 UTC [chaincode] filterError -> DEBU 6a4 Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.557 UTC [chaincode] processStream -> DEBU 6a5 [77b127a6]sending state message RESPONSE
+peer        | 2017-09-05 01:09:14.559 UTC [chaincode] processStream -> DEBU 6a6 [77b127a6]Received message PUT_STATE from shim
+peer        | 2017-09-05 01:09:14.559 UTC [chaincode] HandleMessage -> DEBU 6a7 [77b127a6]Fabric side Handling ChaincodeMessage of type: PUT_STATE in state ready
+peer        | 2017-09-05 01:09:14.559 UTC [chaincode] filterError -> DEBU 6a8 Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.559 UTC [chaincode] func1 -> DEBU 6a9 [77b127a6]state is ready
+peer        | 2017-09-05 01:09:14.560 UTC [chaincode] func1 -> DEBU 6aa [77b127a6]Completed PUT_STATE. Sending RESPONSE
+peer        | 2017-09-05 01:09:14.560 UTC [chaincode] 1 -> DEBU 6ab [77b127a6]enterBusyState trigger event RESPONSE
+peer        | 2017-09-05 01:09:14.560 UTC [chaincode] processStream -> DEBU 6ac [77b127a6]Move state message RESPONSE
+peer        | 2017-09-05 01:09:14.560 UTC [chaincode] HandleMessage -> DEBU 6ad [77b127a6]Fabric side Handling ChaincodeMessage of type: RESPONSE in state ready
+peer        | 2017-09-05 01:09:14.560 UTC [chaincode] filterError -> DEBU 6ae Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.560 UTC [chaincode] processStream -> DEBU 6af [77b127a6]sending state message RESPONSE
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] processStream -> DEBU 6b0 [77b127a6]Received message COMPLETED from shim
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] HandleMessage -> DEBU 6b1 [77b127a6]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] HandleMessage -> DEBU 6b2 [77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6]HandleMessage- COMPLETED. Notify
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] notify -> DEBU 6b3 notifying Txid:77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] Execute -> DEBU 6b4 Exit
+peer        | 2017-09-05 01:09:14.563 UTC [endorser] callChaincode -> DEBU 6b5 Exit
+peer        | 2017-09-05 01:09:14.563 UTC [lockbasedtxmgr] GetTxSimulationResults -> DEBU 6b6 Simulation completed, getting simulation results
+peer        | 2017-09-05 01:09:14.563 UTC [lockbasedtxmgr] Done -> DEBU 6b7 Done with transaction simulation / query execution [6bb7d73d-03a3-4509-a49c-059c726add77]
+peer        | 2017-09-05 01:09:14.563 UTC [endorser] simulateProposal -> DEBU 6b8 Exit
+peer        | 2017-09-05 01:09:14.563 UTC [endorser] endorseProposal -> DEBU 6b9 Entry - txid: 77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6 channel id: helloch chaincode id: name:"lscc" 
+peer        | 2017-09-05 01:09:14.563 UTC [endorser] endorseProposal -> DEBU 6ba info: escc for chaincode id name:"lscc"  is escc
+peer        | 2017-09-05 01:09:14.563 UTC [endorser] callChaincode -> DEBU 6bb Entry - txid: 77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6 channel id: helloch version: 1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.563 UTC [ccprovider] NewCCContext -> DEBU 6bc NewCCCC (chain=helloch,chaincode=escc,version=1.0.0-rc1-snapshot-a709058,txid=77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6,syscc=true,proposal=0xc421043d60,canname=escc:1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] Launch -> DEBU 6bd chaincode is running(no need to launch) : escc:1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] Execute -> DEBU 6be Entry
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] Execute -> DEBU 6bf chaincode canonical name: escc:1.0.0-rc1-snapshot-a709058
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] sendExecuteMessage -> DEBU 6c0 [77b127a6]Inside sendExecuteMessage. Message TRANSACTION
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] setChaincodeProposal -> DEBU 6c1 Setting chaincode proposal context...
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] setChaincodeProposal -> DEBU 6c2 Proposal different from nil. Creating chaincode proposal context...
+peer        | 2017-09-05 01:09:14.563 UTC [chaincode] sendExecuteMessage -> DEBU 6c3 [77b127a6]sendExecuteMsg trigger event TRANSACTION
+peer        | 2017-09-05 01:09:14.564 UTC [chaincode] processStream -> DEBU 6c4 [77b127a6]Move state message TRANSACTION
+peer        | 2017-09-05 01:09:14.564 UTC [chaincode] HandleMessage -> DEBU 6c5 [77b127a6]Fabric side Handling ChaincodeMessage of type: TRANSACTION in state ready
+peer        | 2017-09-05 01:09:14.564 UTC [chaincode] filterError -> DEBU 6c6 Ignoring NoTransitionError: no transition
+peer        | 2017-09-05 01:09:14.564 UTC [chaincode] processStream -> DEBU 6c7 [77b127a6]sending state message TRANSACTION
+peer        | 2017-09-05 01:09:14.564 UTC [shim] func1 -> DEBU 6c8 [77b127a6]Received message TRANSACTION from shim
+peer        | 2017-09-05 01:09:14.564 UTC [shim] handleMessage -> DEBU 6c9 [77b127a6]Handling ChaincodeMessage of type: TRANSACTION(state:ready)
+peer        | 2017-09-05 01:09:14.564 UTC [shim] beforeTransaction -> DEBU 6ca [77b127a6]Received TRANSACTION, invoking transaction on chaincode(Src:ready, Dst:ready)
+peer        | 2017-09-05 01:09:14.564 UTC [escc] Invoke -> DEBU 6cb ESCC starts: 8 args
+peer        | 2017-09-05 01:09:14.564 UTC [escc] Invoke -> DEBU 6cc ESCC exits successfully
+peer        | 2017-09-05 01:09:14.564 UTC [shim] func1 -> DEBU 6cd [77b127a6]Transaction completed. Sending COMPLETED
+peer        | 2017-09-05 01:09:14.564 UTC [shim] func1 -> DEBU 6ce [77b127a6]Move state message COMPLETED
+peer        | 2017-09-05 01:09:14.564 UTC [shim] handleMessage -> DEBU 6cf [77b127a6]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+peer        | 2017-09-05 01:09:14.564 UTC [shim] func1 -> DEBU 6d0 [77b127a6]send state message COMPLETED
+peer        | 2017-09-05 01:09:14.564 UTC [chaincode] processStream -> DEBU 6d1 [77b127a6]Received message COMPLETED from shim
+peer        | 2017-09-05 01:09:14.565 UTC [chaincode] HandleMessage -> DEBU 6d2 [77b127a6]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+peer        | 2017-09-05 01:09:14.565 UTC [chaincode] HandleMessage -> DEBU 6d3 [77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6]HandleMessage- COMPLETED. Notify
+peer        | 2017-09-05 01:09:14.565 UTC [chaincode] notify -> DEBU 6d4 notifying Txid:77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6
+peer        | 2017-09-05 01:09:14.565 UTC [chaincode] Execute -> DEBU 6d5 Exit
+peer        | 2017-09-05 01:09:14.565 UTC [endorser] callChaincode -> DEBU 6d6 Exit
+peer        | 2017-09-05 01:09:14.565 UTC [endorser] endorseProposal -> DEBU 6d7 Exit
+peer        | 2017-09-05 01:09:14.565 UTC [lockbasedtxmgr] Done -> DEBU 6d8 Done with transaction simulation / query execution [6bb7d73d-03a3-4509-a49c-059c726add77]
+peer        | 2017-09-05 01:09:14.565 UTC [endorser] ProcessProposal -> DEBU 6d9 Exit
+orderer     | 2017-09-05 01:09:14.566 UTC [orderer/common/broadcast] Handle -> DEBU 788 Broadcast is filtering message of type ENDORSER_TRANSACTION for channel helloch
+orderer     | 2017-09-05 01:09:14.566 UTC [policies] GetPolicy -> DEBU 789 Returning policy Writers for evaluation
+orderer     | 2017-09-05 01:09:14.566 UTC [cauthdsl] func1 -> DEBU 78a Gate evaluation starts: (&{n:1 rules:<signed_by:0 > })
+orderer     | 2017-09-05 01:09:14.566 UTC [cauthdsl] func2 -> DEBU 78b Principal evaluation starts: (&{0}) (used [false])
+orderer     | 2017-09-05 01:09:14.567 UTC [msp/identity] newIdentity -> DEBU 78c Creating identity instance for ID &{DEFAULT 3c9877995946e57995756309f0450cd4d739e01b83cbee5d6dbbaa8070ab75eb}
+orderer     | 2017-09-05 01:09:14.567 UTC [msp] SatisfiesPrincipal -> DEBU 78d Checking if identity satisfies MEMBER role for DEFAULT
+orderer     | 2017-09-05 01:09:14.567 UTC [msp] Validate -> DEBU 78e MSP DEFAULT validating identity
+orderer     | 2017-09-05 01:09:14.567 UTC [cauthdsl] func2 -> DEBU 78f Principal matched by identity: (&{0}) for [10 7 68 69 70 65 85 76 84 18 177 6 45 45 45 45 45 66 69 71 73 78 32 45 45 45 45 45 10 77 73 73 67 80 122 67 67 65 101 97 103 65 119 73 66 65 103 73 85 75 56 49 116 112 112 77 100 99 108 113 120 52 119 100 51 111 55 81 106 113 89 75 87 55 105 119 119 67 103 89 73 75 111 90 73 122 106 48 69 65 119 73 119 10 100 84 69 76 77 65 107 71 65 49 85 69 66 104 77 67 81 48 52 120 69 84 65 80 66 103 78 86 66 65 103 84 67 70 112 111 90 87 112 112 89 87 53 110 77 82 69 119 68 119 89 68 86 81 81 72 69 119 104 73 89 87 53 110 10 101 109 104 118 100 84 69 84 77 66 69 71 65 49 85 69 67 104 77 75 90 88 104 104 98 88 66 115 90 85 57 121 90 122 69 79 77 65 119 71 65 49 85 69 67 120 77 70 90 71 86 119 100 68 69 120 71 122 65 90 66 103 78 86 10 66 65 77 84 69 109 86 52 89 87 49 119 98 71 86 80 99 109 99 116 89 50 69 116 99 109 57 118 100 68 65 101 70 119 48 120 78 122 65 51 77 84 65 120 77 106 73 121 77 68 66 97 70 119 48 120 79 68 65 51 77 84 65 120 10 77 106 73 121 77 68 66 97 77 71 107 120 67 122 65 74 66 103 78 86 66 65 89 84 65 107 78 79 77 82 69 119 68 119 89 68 86 81 81 73 69 119 104 97 97 71 86 113 97 87 70 117 90 122 69 82 77 65 56 71 65 49 85 69 10 66 120 77 73 83 71 70 117 90 51 112 111 98 51 85 120 70 68 65 83 66 103 78 86 66 65 111 77 67 50 86 52 89 87 49 119 98 71 86 102 98 51 74 110 77 81 52 119 68 65 89 68 86 81 81 76 69 119 86 107 90 88 66 48 10 77 84 69 79 77 65 119 71 65 49 85 69 65 120 77 70 99 71 86 108 99 106 65 119 87 84 65 84 66 103 99 113 104 107 106 79 80 81 73 66 66 103 103 113 104 107 106 79 80 81 77 66 66 119 78 67 65 65 83 75 49 120 52 97 10 51 75 55 110 98 119 70 87 76 82 122 84 86 88 70 70 75 110 118 71 88 113 90 86 66 70 107 111 56 102 82 101 57 110 51 67 78 110 55 66 49 120 114 116 49 109 112 67 86 89 82 87 107 75 57 119 102 117 104 107 54 101 51 65 10 86 101 106 100 49 73 110 88 116 51 89 82 100 101 112 88 111 50 65 119 88 106 65 79 66 103 78 86 72 81 56 66 65 102 56 69 66 65 77 67 65 103 81 119 68 65 89 68 86 82 48 84 65 81 72 47 66 65 73 119 65 68 65 100 10 66 103 78 86 72 81 52 69 70 103 81 85 50 69 102 87 105 79 118 49 80 68 70 98 110 97 115 88 115 69 43 122 109 70 112 115 72 89 119 119 72 119 89 68 86 82 48 106 66 66 103 119 70 111 65 85 105 108 104 69 80 101 101 117 10 47 118 54 87 88 87 98 106 76 109 67 84 118 81 73 85 52 79 48 119 67 103 89 73 75 111 90 73 122 106 48 69 65 119 73 68 82 119 65 119 82 65 73 103 89 108 110 105 85 105 122 116 78 116 102 76 71 65 97 74 68 87 114 103 10 71 119 68 83 66 72 116 119 114 76 117 122 49 83 84 72 68 111 75 105 65 72 77 67 73 71 70 112 113 100 87 66 84 57 65 82 79 100 83 49 86 118 49 73 50 108 43 115 53 97 107 101 107 111 80 90 83 105 85 120 87 55 122 52 10 79 120 111 88 10 45 45 45 45 45 69 78 68 32 45 45 45 45 45 10]
+orderer     | 2017-09-05 01:09:14.567 UTC [msp/identity] Verify -> DEBU 790 Verify: digest = 00000000  c0 26 d6 f6 fe 3c 29 18  8d ec 1b a6 cb 5c 54 37  |.&...<)......\T7|
+orderer     | 00000010  09 58 9e 2e fd e0 24 bf  37 f5 90 9c c4 d1 02 b0  |.X....$.7.......|
+orderer     | 2017-09-05 01:09:14.567 UTC [msp/identity] Verify -> DEBU 791 Verify: sig = 00000000  30 44 02 20 2c 32 27 70  66 24 5f 45 88 bc c1 85  |0D. ,2'pf$_E....|
+orderer     | 00000010  37 f2 0a 57 00 5c d4 b0  0d bb c2 af 3a 9a c7 6a  |7..W.\......:..j|
+orderer     | 00000020  95 53 45 f7 02 20 3e 46  39 85 af d1 07 b0 de 42  |.SE.. >F9......B|
+orderer     | 00000030  18 5b 70 3d c7 df 8a c4  18 65 3b 4f 30 44 15 e9  |.[p=.....e;O0D..|
+orderer     | 00000040  ec 9d 6a 60 01 14                                 |..j`..|
+orderer     | 2017-09-05 01:09:14.568 UTC [cauthdsl] func2 -> DEBU 792 Principal evaluation succeeds: (&{0}) (used [true])
+orderer     | 2017-09-05 01:09:14.568 UTC [cauthdsl] func1 -> DEBU 793 Gate evaluation succeeds: (&{n:1 rules:<signed_by:0 > })
+orderer     | 2017-09-05 01:09:14.568 UTC [orderer/common/sigfilter] Apply -> DEBU 794 Forwarding validly signed message for policy &{%!s(*common.ImplicitMetaPolicy=&{Writers 0}) %!s(int=1) [%!s(*policies.implicitMetaPolicy=&{0xc4201feb40 1 [0xc4202aa130]}) %!s(*policies.implicitMetaPolicy=&{0xc4201ff140 1 [0xc4202aa190]})]}
+orderer     | 2017-09-05 01:09:14.568 UTC [orderer/common/broadcast] Handle -> DEBU 795 Broadcast has successfully enqueued message of type ENDORSER_TRANSACTION for chain helloch
+orderer     | 2017-09-05 01:09:14.568 UTC [policies] GetPolicy -> DEBU 796 Returning policy Writers for evaluation
+orderer     | 2017-09-05 01:09:14.568 UTC [cauthdsl] func1 -> DEBU 797 Gate evaluation starts: (&{n:1 rules:<signed_by:0 > })
+orderer     | 2017-09-05 01:09:14.568 UTC [cauthdsl] func2 -> DEBU 798 Principal evaluation starts: (&{0}) (used [false])
+orderer     | 2017-09-05 01:09:14.569 UTC [msp/identity] newIdentity -> DEBU 799 Creating identity instance for ID &{DEFAULT 3c9877995946e57995756309f0450cd4d739e01b83cbee5d6dbbaa8070ab75eb}
+orderer     | 2017-09-05 01:09:14.569 UTC [msp] SatisfiesPrincipal -> DEBU 79a Checking if identity satisfies MEMBER role for DEFAULT
+orderer     | 2017-09-05 01:09:14.569 UTC [msp] Validate -> DEBU 79b MSP DEFAULT validating identity
+orderer     | 2017-09-05 01:09:14.569 UTC [cauthdsl] func2 -> DEBU 79c Principal matched by identity: (&{0}) for [10 7 68 69 70 65 85 76 84 18 177 6 45 45 45 45 45 66 69 71 73 78 32 45 45 45 45 45 10 77 73 73 67 80 122 67 67 65 101 97 103 65 119 73 66 65 103 73 85 75 56 49 116 112 112 77 100 99 108 113 120 52 119 100 51 111 55 81 106 113 89 75 87 55 105 119 119 67 103 89 73 75 111 90 73 122 106 48 69 65 119 73 119 10 100 84 69 76 77 65 107 71 65 49 85 69 66 104 77 67 81 48 52 120 69 84 65 80 66 103 78 86 66 65 103 84 67 70 112 111 90 87 112 112 89 87 53 110 77 82 69 119 68 119 89 68 86 81 81 72 69 119 104 73 89 87 53 110 10 101 109 104 118 100 84 69 84 77 66 69 71 65 49 85 69 67 104 77 75 90 88 104 104 98 88 66 115 90 85 57 121 90 122 69 79 77 65 119 71 65 49 85 69 67 120 77 70 90 71 86 119 100 68 69 120 71 122 65 90 66 103 78 86 10 66 65 77 84 69 109 86 52 89 87 49 119 98 71 86 80 99 109 99 116 89 50 69 116 99 109 57 118 100 68 65 101 70 119 48 120 78 122 65 51 77 84 65 120 77 106 73 121 77 68 66 97 70 119 48 120 79 68 65 51 77 84 65 120 10 77 106 73 121 77 68 66 97 77 71 107 120 67 122 65 74 66 103 78 86 66 65 89 84 65 107 78 79 77 82 69 119 68 119 89 68 86 81 81 73 69 119 104 97 97 71 86 113 97 87 70 117 90 122 69 82 77 65 56 71 65 49 85 69 10 66 120 77 73 83 71 70 117 90 51 112 111 98 51 85 120 70 68 65 83 66 103 78 86 66 65 111 77 67 50 86 52 89 87 49 119 98 71 86 102 98 51 74 110 77 81 52 119 68 65 89 68 86 81 81 76 69 119 86 107 90 88 66 48 10 77 84 69 79 77 65 119 71 65 49 85 69 65 120 77 70 99 71 86 108 99 106 65 119 87 84 65 84 66 103 99 113 104 107 106 79 80 81 73 66 66 103 103 113 104 107 106 79 80 81 77 66 66 119 78 67 65 65 83 75 49 120 52 97 10 51 75 55 110 98 119 70 87 76 82 122 84 86 88 70 70 75 110 118 71 88 113 90 86 66 70 107 111 56 102 82 101 57 110 51 67 78 110 55 66 49 120 114 116 49 109 112 67 86 89 82 87 107 75 57 119 102 117 104 107 54 101 51 65 10 86 101 106 100 49 73 110 88 116 51 89 82 100 101 112 88 111 50 65 119 88 106 65 79 66 103 78 86 72 81 56 66 65 102 56 69 66 65 77 67 65 103 81 119 68 65 89 68 86 82 48 84 65 81 72 47 66 65 73 119 65 68 65 100 10 66 103 78 86 72 81 52 69 70 103 81 85 50 69 102 87 105 79 118 49 80 68 70 98 110 97 115 88 115 69 43 122 109 70 112 115 72 89 119 119 72 119 89 68 86 82 48 106 66 66 103 119 70 111 65 85 105 108 104 69 80 101 101 117 10 47 118 54 87 88 87 98 106 76 109 67 84 118 81 73 85 52 79 48 119 67 103 89 73 75 111 90 73 122 106 48 69 65 119 73 68 82 119 65 119 82 65 73 103 89 108 110 105 85 105 122 116 78 116 102 76 71 65 97 74 68 87 114 103 10 71 119 68 83 66 72 116 119 114 76 117 122 49 83 84 72 68 111 75 105 65 72 77 67 73 71 70 112 113 100 87 66 84 57 65 82 79 100 83 49 86 118 49 73 50 108 43 115 53 97 107 101 107 111 80 90 83 105 85 120 87 55 122 52 10 79 120 111 88 10 45 45 45 45 45 69 78 68 32 45 45 45 45 45 10]
+orderer     | 2017-09-05 01:09:14.569 UTC [msp/identity] Verify -> DEBU 79d Verify: digest = 00000000  c0 26 d6 f6 fe 3c 29 18  8d ec 1b a6 cb 5c 54 37  |.&...<)......\T7|
+orderer     | 00000010  09 58 9e 2e fd e0 24 bf  37 f5 90 9c c4 d1 02 b0  |.X....$.7.......|
+orderer     | 2017-09-05 01:09:14.569 UTC [msp/identity] Verify -> DEBU 79e Verify: sig = 00000000  30 44 02 20 2c 32 27 70  66 24 5f 45 88 bc c1 85  |0D. ,2'pf$_E....|
+orderer     | 00000010  37 f2 0a 57 00 5c d4 b0  0d bb c2 af 3a 9a c7 6a  |7..W.\......:..j|
+orderer     | 00000020  95 53 45 f7 02 20 3e 46  39 85 af d1 07 b0 de 42  |.SE.. >F9......B|
+orderer     | 00000030  18 5b 70 3d c7 df 8a c4  18 65 3b 4f 30 44 15 e9  |.[p=.....e;O0D..|
+orderer     | 00000040  ec 9d 6a 60 01 14                                 |..j`..|
+orderer     | 2017-09-05 01:09:14.569 UTC [cauthdsl] func2 -> DEBU 79f Principal evaluation succeeds: (&{0}) (used [true])
+orderer     | 2017-09-05 01:09:14.569 UTC [cauthdsl] func1 -> DEBU 7a0 Gate evaluation succeeds: (&{n:1 rules:<signed_by:0 > })
+orderer     | 2017-09-05 01:09:14.570 UTC [orderer/common/sigfilter] Apply -> DEBU 7a1 Forwarding validly signed message for policy &{%!s(*common.ImplicitMetaPolicy=&{Writers 0}) %!s(int=1) [%!s(*policies.implicitMetaPolicy=&{0xc4201feb40 1 [0xc4202aa130]}) %!s(*policies.implicitMetaPolicy=&{0xc4201ff140 1 [0xc4202aa190]})]}
+orderer     | 2017-09-05 01:09:14.570 UTC [orderer/common/blockcutter] Ordered -> DEBU 7a2 Enqueuing message into batch
+orderer     | 2017-09-05 01:09:14.570 UTC [orderer/common/broadcast] Handle -> WARN 7a3 Error reading from stream: rpc error: code = Canceled desc = context canceled
+orderer     | 2017-09-05 01:09:14.570 UTC [orderer/main] func1 -> DEBU 7a4 Closing Broadcast stream
+orderer     | 2017-09-05 01:09:15.572 UTC [orderer/solo] main -> DEBU 7a5 Batch timer expired, creating block
+orderer     | 2017-09-05 01:09:15.572 UTC [fsblkstorage] retrieveBlockByNumber -> DEBU 7a6 retrieveBlockByNumber() - blockNum = [4]
+orderer     | 2017-09-05 01:09:15.572 UTC [fsblkstorage] newBlockfileStream -> DEBU 7a7 newBlockfileStream(): filePath=[/var/hyperledger/production/orderer/chains/helloch/blockfile_000000], startOffset=[23816]
+orderer     | 2017-09-05 01:09:15.572 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 7a8 Remaining bytes=[5382], Going to peek [8] bytes
+orderer     | 2017-09-05 01:09:15.572 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 7a9 Returning blockbytes - length=[5380], placementInfo={fileNum=[0], startOffset=[23816], bytesOffset=[23818]}
+orderer     | 2017-09-05 01:09:15.573 UTC [orderer/multichain] addBlockSignature -> DEBU 7aa &{ledgerResources:0xc4203bdcc0 chain:0xc4202f74d0 cutter:0xc420a2f360 filters:0xc42031a540 signer:0x1268ea8 lastConfig:0 lastConfigSeq:1}
+orderer     | 2017-09-05 01:09:15.573 UTC [orderer/multichain] addBlockSignature -> DEBU 7ab &{}
+orderer     | 2017-09-05 01:09:15.573 UTC [msp] GetLocalMSP -> DEBU 7ac Returning existing local MSP
+orderer     | 2017-09-05 01:09:15.573 UTC [msp] GetDefaultSigningIdentity -> DEBU 7ad Obtaining default signing identity
+orderer     | 2017-09-05 01:09:15.573 UTC [msp] GetLocalMSP -> DEBU 7ae Returning existing local MSP
+orderer     | 2017-09-05 01:09:15.573 UTC [msp] GetDefaultSigningIdentity -> DEBU 7af Obtaining default signing identity
+orderer     | 2017-09-05 01:09:15.573 UTC [msp/identity] Sign -> DEBU 7b0 Sign: plaintext: 0ABD060A0744454641554C5412B1062D...7F8C8C0330244A04E6772450CBF456AE 
+orderer     | 2017-09-05 01:09:15.573 UTC [msp/identity] Sign -> DEBU 7b1 Sign: digest: 308CE06D1BD4D15A1D12F6085B4C3FEF4554AB9115714EE71EF02A1F634D18A0 
+orderer     | 2017-09-05 01:09:15.574 UTC [msp] GetLocalMSP -> DEBU 7b2 Returning existing local MSP
+orderer     | 2017-09-05 01:09:15.574 UTC [msp] GetDefaultSigningIdentity -> DEBU 7b3 Obtaining default signing identity
+orderer     | 2017-09-05 01:09:15.574 UTC [orderer/multichain] addLastConfigSignature -> DEBU 7b4 [channel: helloch] About to write block, setting its LAST_CONFIG to 0
+orderer     | 2017-09-05 01:09:15.574 UTC [msp] GetLocalMSP -> DEBU 7b5 Returning existing local MSP
+orderer     | 2017-09-05 01:09:15.574 UTC [msp] GetDefaultSigningIdentity -> DEBU 7b6 Obtaining default signing identity
+orderer     | 2017-09-05 01:09:15.574 UTC [msp/identity] Sign -> DEBU 7b7 Sign: plaintext: 0ABD060A0744454641554C5412B1062D...7F8C8C0330244A04E6772450CBF456AE 
+orderer     | 2017-09-05 01:09:15.574 UTC [msp/identity] Sign -> DEBU 7b8 Sign: digest: B2F47698B1E391A86F7D3DEB31522EC97478035F852C3AEB388945A652E0154A 
+orderer     | 2017-09-05 01:09:15.581 UTC [fsblkstorage] indexBlock -> DEBU 7b9 Indexing block [blockNum=5, blockHash=[]byte{0x20, 0x10, 0x8, 0xf1, 0xa9, 0xc8, 0xe7, 0x82, 0xbd, 0x73, 0x77, 0x78, 0xa7, 0xb3, 0x96, 0x1b, 0xd0, 0x43, 0x22, 0x47, 0xf0, 0x5f, 0xeb, 0xc9, 0xdb, 0x5a, 0x6c, 0xb, 0xdb, 0x4f, 0x66, 0x69} txOffsets=
+orderer     | txId=77b127a6d238f3f9bb285174ce57fe8801b32574ecbd3a74822e7156ab2c84b6 locPointer=offset=70, bytesLength=3431
+orderer     | ]
+orderer     | 2017-09-05 01:09:15.581 UTC [fsblkstorage] updateCheckpoint -> DEBU 7ba Broadcasting about update checkpointInfo: latestFileChunkSuffixNum=[0], latestFileChunksize=[34580], isChainEmpty=[false], lastBlockNumber=[5]
+orderer     | 2017-09-05 01:09:15.581 UTC [orderer/multichain] WriteBlock -> DEBU 7bb [channel: helloch] Wrote block 5
+peer        | 2017-09-05 01:09:23.650 UTC [ConnProducer] NewConnection -> ERRO 6da Failed connecting to 127.0.0.1:7050 , error: context deadline exceeded
+peer        | 2017-09-05 01:09:23.650 UTC [deliveryClient] connect -> ERRO 6db Failed obtaining connection: Could not connect to any of the endpoints: [127.0.0.1:7050]
+
